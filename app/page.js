@@ -1,19 +1,22 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <>
       <header className="header">
         <div className="nav-container">
           <div className="logo">
-            <img src="/assets/logo.png" alt="Inspire Dance Complex" className="logo-img" />
+            <Image src="/assets/logo.png" alt="Inspire Dance Complex" className="logo-img" width={200} height={50} />
           </div>
           <nav>
             <ul className="nav-menu">
-              <li><a href="/" className="active">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/classes">Classes</a></li>
-              <li><a href="/schedule">Schedule</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="https://app.jackrabbitclass.com/portal" target="_blank" className="parent-login">Parent Login</a></li>
+              <li><Link href="/" className="active">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/classes">Classes</Link></li>
+              <li><Link href="/schedule">Schedule</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+              <li><a href="https://app.jackrabbitclass.com/portal" target="_blank" rel="noopener noreferrer" className="parent-login">Parent Login</a></li>
             </ul>
           </nav>
         </div>
@@ -21,16 +24,17 @@ export default function Home() {
 
       <section className="hero hero-home">
         <div className="hero-overlay"></div>
-        <img src="/assets/hero-home.jpg" alt="Inspire Dance Complex Studio" className="hero-bg" />
+        <Image src="/assets/hero-home.jpg" alt="Inspire Dance Complex Studio" className="hero-bg" fill priority />
         <div className="hero-content">
           <h1>INSPIRING THE<br /><span className="hero-accent">Next Generation</span></h1>
-          <p>Corona's Premier Dance Studio • Ages 2-18</p>
+          <p>Corona&apos;s Premier Dance Studio • Ages 2-18</p>
           <div className="cta-buttons">
-            <a href="/contact" className="btn btn-primary">Book Free Trial</a>
-            <a href="/classes" className="btn btn-secondary">View Classes</a>
+            <Link href="/contact" className="btn btn-primary">Book Free Trial</Link>
+            <Link href="/classes" className="btn btn-secondary">View Classes</Link>
           </div>
         </div>
       </section>
+
       <section className="section awards-bar">
         <div className="awards-container">
           <div className="award-item">
@@ -39,7 +43,7 @@ export default function Home() {
           </div>
           <div className="award-item">
             <i className="fas fa-star"></i>
-            <span>2022 City's Best Awards</span>
+            <span>2022 City&apos;s Best Awards</span>
           </div>
           <div className="award-item">
             <i className="fas fa-medal"></i>
@@ -55,17 +59,17 @@ export default function Home() {
         
         <div className="features-grid">
           <div className="feature-card">
-            <img src="/assets/feature-training.jpg" alt="Elite Dance Training" className="feature-img" />
+            <Image src="/assets/feature-training.jpg" alt="Elite Dance Training" className="feature-img" width={800} height={600} />
             <div className="feature-content">
               <div className="feature-icon">
                 <i className="fas fa-trophy"></i>
               </div>
               <h3>Award Winning</h3>
-              <p>3x National Grand Champions and recognized as Corona's Best Dance Studio</p>
+              <p>3x National Grand Champions and recognized as Corona&apos;s Best Dance Studio</p>
             </div>
           </div>
           <div className="feature-card">
-            <img src="/assets/feature-instructors.jpg" alt="Professional Instructors" className="feature-img" />
+            <Image src="/assets/feature-instructors.jpg" alt="Professional Instructors" className="feature-img" width={800} height={600} />
             <div className="feature-content">
               <div className="feature-icon">
                 <i className="fas fa-star"></i>
@@ -75,7 +79,7 @@ export default function Home() {
             </div>
           </div>
           <div className="feature-card">
-            <img src="/assets/feature-studio.jpg" alt="Luxury Dance Studio" className="feature-img" />
+            <Image src="/assets/feature-studio.jpg" alt="Luxury Dance Studio" className="feature-img" width={800} height={600} />
             <div className="feature-content">
               <div className="feature-icon">
                 <i className="fas fa-heart"></i>
@@ -85,7 +89,7 @@ export default function Home() {
             </div>
           </div>
           <div className="feature-card">
-            <img src="/assets/feature-performance.jpg" alt="Performance Opportunities" className="feature-img" />
+            <Image src="/assets/feature-performance.jpg" alt="Performance Opportunities" className="feature-img" width={800} height={600} />
             <div className="feature-content">
               <div className="feature-icon">
                 <i className="fas fa-film"></i>
@@ -102,8 +106,8 @@ export default function Home() {
         <div className="divider"></div>
         <p className="section-subtitle">Your first class is complimentary</p>
         <div className="cta-buttons">
-          <a href="/contact" className="btn btn-primary">Book Your Free Trial</a>
-          <a href="/schedule" className="btn btn-secondary">View Schedule</a>
+          <Link href="/contact" className="btn btn-primary">Book Your Free Trial</Link>
+          <Link href="/schedule" className="btn btn-secondary">View Schedule</Link>
         </div>
       </section>
 
@@ -119,7 +123,7 @@ export default function Home() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <p>"Inspire Dance Complex has been a very positive experience for my daughter. The instructors and coaches are kind and knowledgeable and wonderful with all the dancers."</p>
+            <p>&ldquo;Inspire Dance Complex has been a very positive experience for my daughter. The instructors and coaches are kind and knowledgeable and wonderful with all the dancers.&rdquo;</p>
             <div className="testimonial-author">— IDC Parent</div>
           </div>
           <div className="testimonial-card">
@@ -130,7 +134,7 @@ export default function Home() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <p>"We are so glad we found Inspire. The older girls are great kids and my daughter has great role models to follow and learn from."</p>
+            <p>&ldquo;We are so glad we found Inspire. The older girls are great kids and my daughter has great role models to follow and learn from.&rdquo;</p>
             <div className="testimonial-author">— IDC Parent</div>
           </div>
           <div className="testimonial-card">
@@ -141,7 +145,7 @@ export default function Home() {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
             </div>
-            <p>"My girls love IDC. Always looking forward to class. The studio creates such a positive and inspiring environment for all the dancers."</p>
+            <p>&ldquo;My girls love IDC. Always looking forward to class. The studio creates such a positive and inspiring environment for all the dancers.&rdquo;</p>
             <div className="testimonial-author">— IDC Parent</div>
           </div>
         </div>
@@ -153,17 +157,17 @@ export default function Home() {
             <h3>Inspire Dance Complex</h3>
             <p>Inspiring the next generation of dancers in Corona, CA since 2013.</p>
             <div className="social-links">
-              <a href="https://www.instagram.com/inspiredancecomplex/" target="_blank"><i className="fab fa-instagram"></i></a>
-              <a href="https://www.facebook.com/InspireDanceCorona/" target="_blank"><i className="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/inspiredancecomplex/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/InspireDanceCorona/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
               <a href="#"><i className="fab fa-youtube"></i></a>
             </div>
           </div>
           <div className="footer-section">
             <h3>Navigation</h3>
-            <p><a href="/about">About Us</a></p>
-            <p><a href="/classes">Classes</a></p>
-            <p><a href="/schedule">Schedule</a></p>
-            <p><a href="/contact">Contact</a></p>
+            <p><Link href="/about">About Us</Link></p>
+            <p><Link href="/classes">Classes</Link></p>
+            <p><Link href="/schedule">Schedule</Link></p>
+            <p><Link href="/contact">Contact</Link></p>
           </div>
           <div className="footer-section">
             <h3>Programs</h3>
